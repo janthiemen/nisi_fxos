@@ -1,0 +1,41 @@
+{
+	"name": "NISI",
+	"description": "NISI is a simple pocket client for Firefox OS.",
+	"launch_path": "/index.html",
+	"developer": {
+		"name": "Jan Thiemen Postema",
+		"url": "http://github.com/janthiemen/nisi_fxos"
+	},
+	"version":1.01,
+	"fullscreen": "false",
+	"orientation": "portrait-primary",
+	"type": "privileged",
+	"permissions": {
+		"systemXHR": {
+			"description": "Needed for connecting to Pocket's servers"
+		}
+	},
+	"icons": {
+		"30": "/img/icon-30.png",
+		"60": "/img/icon-60.png",
+		"128": "/img/icon-128.png"
+	},
+	"activities": {
+		"save-bookmark": {
+			"filters": {
+				"type": "url"
+			},
+			"disposition": "inline",
+			"href": "/addUrlActivity.html",
+			"returnValue": false
+		},
+		"share": {
+			"filters": {
+				"type": "url"
+			},
+			"disposition": "inline",
+			"href": "/addUrlActivity.html",
+			"returnValue": false
+		}
+	}
+}

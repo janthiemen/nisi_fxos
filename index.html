@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>NISI - a Pocket client</title>
+        
+        <!-- FF OS stylesheet -->
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style/headers.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style_unstable/lists.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style/input_areas.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style_unstable/toolbars.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style_unstable/progress_activity.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style_unstable/lists.css">
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style/headers.css">
+		<link rel="stylesheet" type="text/css" href="buildingblocks/style/action_menu.css">
+        <link rel="stylesheet" type="text/css" href="buildingblocks/icons/styles/action_icons.css">
+		<link rel="stylesheet" type="text/css" href="buildingblocks/style/switches.css">
+		<link rel="stylesheet" type="text/css" href="buildingblocks/style/buttons.css">
+		<link rel="stylesheet" type="text/css" href="buildingblocks/style/input_areas.css">
+		<link rel="stylesheet" type="text/css" href="buildingblocks/icons/styles/settings_icons.css">
+		
+        <!-- App specific stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style/app.css" />
+        
+        <script src="script/zepto.js" type="text/javascript"></script>
+		<script src="script/list.min.js" type="text/javascript"></script>
+    </head>
+    
+    <body role="application">
+        <section role="region" id="home-view" class="skin-organic back-home">
+            <header id="list_header">                
+				<menu type="toolbar">
+					<a id="open_options_menu"><span class="icon icon-menu"></span></a>
+				</menu>
+				<h1>NISI - a Pocket client</h1>
+
+            </header>
+            <article id="appList" data-type="list">
+				<div id="articles_container">
+					<ul id="articles" class="list">
+						<!--The article list will be appended to this list -->
+					</ul>
+				</div>
+            </article>
+            <!--<div id="main_toolbar" role="toolbar">				
+				<ul>
+					<li><button id="refresh_button" class="action-icon email-sync"></i></button></li>
+					<li><button id="archive_filter" class="action-icon move"></i></button></li>
+					<li><button id="favorite_filter" class="action-icon bookmarked"></i></button></li>
+					<li><button id="add_button" class="action-icon new"></i></button></li>
+					<li><button id="settings-btn" class="action-icon settings"></i></button></li>
+				</ul>
+			</div>-->
+			<form role="dialog" data-type="action" id="options_container">
+				<header>Options</header>
+				<menu id="options_menu">
+					<button id="refresh_button"><span id="refresh_button_content">Refresh list</span></button>
+					<button id="archive_filter"><span id="archive_filter_content">Archived articles</span></button>
+					<button id="favorite_filter"><span id="favorite_filter_content">Favorited articles</span></button>
+					<button id="add_button"><span id="add_button_content">Add article</span></button>
+					<button id="settings-btn"><span id="settings-btn_content">Settings</span></button>
+					<button id="cancel_button_click"><span id="cancel_button">Cancel</span></button>
+				</menu>
+			</form>
+        </section>
+
+        <!-- Article -->
+        <section role="region" id="article-view">
+            <header id="articleview_header">                
+                <button id="back-btnArticle"><span class="icon icon-back">back</span></button>
+				<menu type="toolbar">
+					<a id="open_article_options_menu"><span class="icon icon-menu"></span></a>
+				</menu>
+                <h1 id="article_title">Loading</h1>
+            </header>
+            <article id="article_content" data-type="text">
+                <div id="article_content_container"><progress></progress><button id="openUrl_button"><span>Open in browser</span></button></div>
+            </article>
+			<form role="dialog" data-type="action" id="article_options_container">
+				<header>Options</header>
+				<menu id="article_options_menu">
+					<button id="delete_button_click"><span id="delete_button">Delete</span></button>
+					<button id="archive_button_click"><span id="archive_button">Archive</span></button>
+					<button id="favorite_button_click"><span id="favorite_button">Favorite</span></button>
+					<button id="openUrl_button_click"><span id="openUrl_button">Open in browser</span></button>
+					<button id="shareUrl_button_click"><span id="shareUrl_button">Share this article</span></button>
+					<button id="article_cancel_button_click"><span id="cancel_button">Cancel</span></button>
+				</menu>
+			</form>
+        </section>   
+
+        <!-- Setting -->
+        <section role="region" id="settings-view">
+            <header id="settingsview_header">                
+                <button id="back-btnSettings"><span class="icon icon-back">back</span></button>
+                <h1 id="settings_title">Settings</h1>
+            </header>
+            <article id="settings_content" data-type="text">
+                <div id="settings_content_container"><br />
+					<button id="sorting_button_click"><span class="span_colored" id="sorting_button">Sorting</span></button>
+					<button id="skin_button_click"><span class="span_colored" id="skin_button">Header skins</span></button>
+					<button id="general_skin_button_click"><span class="span_colored" id="general_skin_button">General skins</span></button>
+				</div>
+            </article>
+			<form role="dialog" data-type="action" id="sort_options">
+				<header>Sorting</header>
+				<menu id="sorting_menu">
+					<button id="newest_button_click"><span id="newest_button">Newest first</span></button>
+					<button id="oldest_button_click"><span id="oldest_button">Oldest first</span></button>
+					<button id="alph_buttonAZ_click"><span id="alph_buttonAZ">A - Z</span></button>
+					<button id="alph_buttonZA_click"><span id="alph_buttonZA">Z - A</span></button>
+					<button id="cancel_button_sorting_click"><span id="cancel_button">Cancel</span></button>
+				</menu>
+			</form>
+			<form role="dialog" data-type="action" id="skin_options">
+				<header>Skins<</header>
+				<menu id="skins_menu">
+					<button id="skin_dark_button_click"><span id="skin_dark_button">Dark skin</span></button>
+					<button id="skin_organic_button_click"><span id="skin_organic_button">Organic skin</span></button>
+					<button id="skin_light_button_click"><span id="skin_light_button">Light skin</span></button>
+					<button id="cancel_button_skin_click"><span id="cancel_button">Cancel</span></button>
+				</menu>
+			</form>
+			<form role="dialog" data-type="action" id="general_skin_options">
+				<header>General skins</header>
+				<menu id="general_skins_menu">
+					<button id="skin_white_button_click"><span id="skin_white_button">White skin</span></button>
+					<button id="skin_soft_white_button_click"><span id="skin_soft_white_button">Soft white skin</span></button>
+					<button id="skin_black_button_click"><span id="skin_black_button">Black skin</span></button>
+					<button id="skin_grey_button_click"><span id="skin_grey_button">Grey skin</span></button>
+					<button id="cancel_button_general_skin_click"><span id="cancel_button">Cancel</span></button>
+				</menu>
+			</form>
+        </section>       
+		
+        
+        <script src="script/app.js"></script>
+    </body>
+
+</html>

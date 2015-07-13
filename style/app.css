@@ -1,0 +1,116 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	background-color: #fff;
+} 
+body {
+	height: 100%;
+	display: block;
+	overflow: hidden;
+    font-size: 16px;
+} 
+section[role="region"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #FFFEEE;
+} 
+.back-home {
+	z-index: 0;
+}
+#home-view {
+	width: 100%;
+	left: 0%;
+}
+
+#repeat-select {
+	visibility:hidden;
+}
+
+/*Section transition specific
+	-- Article view
+*/
+.move-Article-view  {
+	z-index: 10;
+	transform: translateX(-100%);
+	transition: all 0.2s;
+}
+.back-Article-view  {
+	z-index: 10;	
+	transform: translateX(0%);
+	transition: all 0.4s;
+}
+
+#article-view {
+	width: 100%;
+	left: 100%;
+}
+#article_content_container {
+    font-size: 1.9rem;
+    overflow : auto;
+}
+/*
+	-- Settings view
+*/
+.move-Settings-view  {
+	z-index: 10;
+	transform: translateX(-100%);
+	transition: all 0.2s;
+}
+.back-Settings-view  {
+	z-index: 10;	
+	transform: translateX(0%);
+	transition: all 0.4s;
+}
+
+#settings-view {
+	width: 100%;
+	left: 100%;
+}
+#settings_content_container {
+    font-size: 1.9rem;
+    overflow : auto;
+}
+
+/*General CSS*/
+#articles_container {
+    overflow : auto;
+}
+
+#options_container {
+	display:none;
+}
+#article_options_container {
+	display:none;
+}
+#sort_options {
+	display:none;
+}
+#skin_options {
+	display:none;
+}
+#general_skin_options {
+	display:none;
+}
+.timestamp {
+	visibility: hidden;
+}
+
+.favorite {
+	visibility: hidden;
+}
+.status {
+	visibility: hidden;
+}
+
+#img-span {
+	margin-top:25px;
+	padding-left:calc(50% - 12px);
+}
+
+menu {
+	color: white;
+}

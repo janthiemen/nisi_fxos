@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>NISI - a pocket client</title>
+        
+        <!-- FF OS stylesheet -->
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style/headers.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style/buttons.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style_unstable/lists.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style/input_areas.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style_unstable/toolbars.css" />
+        <link rel="stylesheet" type="text/css" href="buildingblocks/style_unstable/progress_activity.css" />
+        
+        <!-- App specific stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style/app.css" />
+        
+        <script src="script/zepto.js" type="text/javascript"></script>
+    </head>
+    
+    <body>
+        <!-- Article -->
+        <section id="bookmark-entry-sheet" role="region" class="skin-dark">
+            <header id="add_header">                
+                <h1 id="add_title">Add bookmark to Pocket</h1>
+            </header>
+            <article id="add_content" data-type="text">
+                    <p>
+                       <input type="text" id="url" placeholder="URL" required="">
+                    </p>
+                    <p>
+                        <input type="text" id="title" placeholder="Title (optional)">
+                    </p>
+                    <button id="addUrlActivity">Add to pocket</button>
+            </article>
+        </section>       
+        
+        <script src="script/save-bookmark.js"></script>
+    </body>
+</html>
