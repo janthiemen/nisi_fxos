@@ -41,25 +41,25 @@ if (localStorage.skin) {
 //Send the url to pocket
 $('#addUrl').click(function() {
     var url = $('#url').val();
-	if(url.toLowerCase().substring(0, 6) != "http://" && url.toLowerCase().substring(0, 7) != "https://") {
+	if(url.toLowerCase().substring(0, 7) != "http://" && url.toLowerCase().substring(0, 8) != "https://") {
 		console.log("We have to add http to the url");
 		url = "http://"+url;
 	}
     var encodedURL = encodeURI(url);
     $.post('https://getpocket.com/v3/add', {"url":encodedURL, "consumer_key":"16297-b6a29ebe92585e0ce5f52ae0", "access_token":localStorage.accesskey}, function (response) {
-		alert("The url was succesfully saved to pocket! You can now add another url, or press the back button to get back to your article list.");
+    window.close();
     });
 });
 
 $('#addUrlActivity').click(function() {
     var url = $('#url').val();
-	if(url.toLowerCase().substring(0, 6) != "http://" && url.toLowerCase().substring(0, 7) != "https://") {
+	if(url.toLowerCase().substring(0, 7) != "http://" && url.toLowerCase().substring(0, 8) != "https://") {
 		console.log("We have to add http to the url");
 		url = "http://"+url;
 	}
     var encodedURL = encodeURI(url);
     $.post('https://getpocket.com/v3/add', {"url":encodedURL, "consumer_key":"16297-b6a29ebe92585e0ce5f52ae0", "access_token":localStorage.accesskey}, function (response) {
-		alert("The url was succesfully saved to pocket! You can now close this window by pressing the HOME button.");
+    window.close();
     });
 });
 
