@@ -39,4 +39,4 @@ function receiveMessage(evt) {
 	localStorage.accesskey = evt.data;
 	window.location.href = "index.html";
 }
-window.open("http://kappline.nl/firefoxos/pocket/auth.php");
+window.open("https://sakila-afero.rhcloud.com/nisi/auth.php");
